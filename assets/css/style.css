@@ -398,3 +398,109 @@ footer {
 .part:hover {
   background: grey;
 }
+
+
+/* Pokemon page */
+
+.evolutions {
+  margin-top: 10px;
+  padding: 5px;
+  
+}
+
+.pokemons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 50px;
+}
+
+.pokemons p {
+  font-family: Merriweather, sans-serif;
+  font-size: 12px;
+  
+  
+}
+
+#spriga div {
+  display: flex;
+
+}
+
+#sprigatito-image {
+  width: 10rem;
+  height: auto;
+}
+
+#flora div {
+  display: flex;
+
+}
+
+#floragato-image {
+  width: 12rem;
+  height: auto;
+}
+
+#meows div {
+  display: flex;
+}
+
+#meowscarada-image {
+  width: auto;
+  height: 14rem;
+}
+
+#fuecoco-image {
+  width: 10rem;
+  height: auto;
+}
+
+#fuecoco div {
+  display: flex;
+}
+
+#crocalor-image {
+  width: 10rem;
+  height: auto;
+}
+
+#crocalor div {
+  display: flex;
+}
+
+#skeledirge-image {
+  width: 10rem;
+  height: auto;
+}
+
+#skeledirge div {
+  display: flex;
+}
+
+#quaxly-image {
+  width: 7rem;
+  height: auto;
+}
+
+#quaxly div {
+  display: flex;
+}
+
+#quaxwell-image {
+  width: 10rem;
+  height: auto;
+}
+
+#quaxwell div {
+  display: flex;
+}
+
+#quaquaval-image {
+  width: 14rem;
+  height: auto;
+}
+
+#quaquaval div {
+  display: flex;
+}
