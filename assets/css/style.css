@@ -226,8 +226,6 @@ footer {
     transform: rotate(-35deg);
   }
 
-
-
   .navbar .menu-items li{
       font-size: 1.6rem;
   }
@@ -256,7 +254,38 @@ footer {
     right: 15px;
     font-size: 1.3rem;
   }
+
+  #hero-outer {
+    gap: 0.5rem;
+    background-image: url(../images/allthree.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .part {
+    visibility: hidden;
+  }
 }
+
+  @keyframes hero-zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+
+  }
 
 /* hero */
 
