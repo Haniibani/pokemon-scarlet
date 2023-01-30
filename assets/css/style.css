@@ -504,3 +504,32 @@ footer {
 #quaquaval div {
   display: flex;
 }
+
+/* The Game */
+
+#about h2 {
+  margin-top: 60px;
+}
+
+#paldea-region h2 {
+  margin-top: 20px;
+
+}
+
+#info-text {
+  font-family: Merriweather, sans-serif;
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+
+hr {
+  border-bottom: 3px solid #000000;
+  width: 100%;
+  margin: 5px;
+}
+
+#map {
+  margin-top: 20px;
+  border: 2px solid black;
+}
