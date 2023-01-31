@@ -301,6 +301,10 @@ footer {
 
   }
 
+  .pokemons p {
+    font-size: 12px;
+  }
+
   .part {
     visibility: hidden;
   }
@@ -446,7 +450,7 @@ footer {
 
 .pokemons p {
   font-family: Merriweather, sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   margin-left: auto;
   margin-right: auto;
   display: table;
