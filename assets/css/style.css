@@ -1,25 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    list-style: none;
-    text-decoration: none;
-    font-family: Merriweather, sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: Merriweather, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background: #fefefe;
+  background: #fefefe;
 }
 
+/* common containers */
 
 .container {
   max-width: 1200px;
   width: 100%;
   margin: auto;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* imgage */
+
+.image{
+  max-width: 30%;
+  height: auto;
+}
+
+
+/* buy button */
+
+#buy-link {
+  width: fit-content;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.buy-button:hover {background-color: #3e8e41}
+
+.buy-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 
 /* navigation bar */
 
@@ -32,12 +79,11 @@ body {
 .navbar {
   position: fixed;
   top: 0;
+  height: fit-content;
   width: 100%;
   background: #fa0000;
-  color: #000;
   opacity: 0.85;
-  height: 60px;
-  z-index: 12;
+  z-index: 2;
 }
 
 .navbar-container {
@@ -49,7 +95,6 @@ body {
 }
 
 .menu-items {
-  order: 2;
   display: flex;
   align-items: center;
 }
@@ -62,13 +107,13 @@ body {
 }  
 
 .menu-items a {
-    display: flex;
-    color: #fefefe;
-    font-size: 1.5rem;
-    padding: 10px 25px;
-    border-radius: 50px;
-    transition: 0.2s;
-    margin: 0 5px;
+  display: flex;
+  color: #fefefe;
+  font-size: 1.5rem;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
 }
 
 .menu-items a:hover {
@@ -84,11 +129,198 @@ body {
 }
 
 .logo {
-  order: 1;
-  font-size: 2.3rem;
+  font-size: 1.75rem;
   margin-bottom: 0.5rem;
-  color: #fefefe
+  font-weight: bold;
+  color: #fefefe;
+  text-shadow: -1px 1px 2px #000,
+  1px 1px 2px #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
 }
+
+/* Home-info section on frontpage */
+
+/* hero */
+
+#hero-outer {
+  height: 600px;
+  width: 100%;
+  gap: 0.5rem;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+}
+
+.all-three-container {
+  display: none;
+}
+
+.part {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #fefefe;
+  cursor: pointer;
+  margin-top: 4.5%;
+  position: relative;
+}
+
+.part.left {
+  background: #53a134;
+  transition: all 0.5s ease;
+}
+
+.part.center {
+  background: #eb4823;
+  transition: all 0.5s ease;
+}
+
+.part.right {
+  background: #4abecb;
+  transition: all 0.5s ease;
+}
+
+.part .text {
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(0deg, #000000bf 0%, #ffffff00 100%);
+}
+
+.part h2 {
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.part .abstract {
+  color: #fefefe;
+  font-family: Merriweather, sans-serif;
+  padding-top: 1rem;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.part p {
+  margin-bottom: 1rem;
+}
+
+.part.left .text {
+  padding-right: 5rem;
+}
+
+.part.center .text {
+  padding-right: 5rem;
+}
+
+.part.right .text {
+  padding-right: 5rem;
+}
+
+.part .bg {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  transition: all 0.5s ease;
+  background-size: cover;
+}
+
+.part.left .bg {
+  background-image: url(../images/sprigatito.png);
+}
+
+.part.center .bg {
+  background-image: url(../images/fuecoco.png);
+}
+
+.part.right .bg {
+  background-image: url(../images/quaxly.png);
+}
+
+.part:hover .bg {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+
+.part:hover .abstract {
+  opacity: 1;
+  max-height: 20rem;
+}
+
+.part:hover {
+  background: grey;
+}
+#home-info {
+  margin-top: 2%;
+  padding: 5%;
+}
+
+#home-info p {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+#home-info h2 {
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.home-info-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#pokeball {
+  object-fit: scale-down;
+  width: auto;
+  height: 4rem;
+  text-align: center;
+}
+
+
+#video-container {
+  width: 50%;
+}
+
+.myIframe {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.myIframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.games {
+  display: flex; 
+  justify-content: space-between; 
+  padding: 0% 15% 0% 15%;
+  gap: 5%;
+}
+
+.games h1 {
+  font-size: 3.5rem;
+}
+
+
 
 /* footer */
 
@@ -272,26 +504,22 @@ footer {
   }
 
   #hero-outer {
-    gap: 0.5rem;
-    background-image: url(../images/allthree.png);
-    background-size: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin-top: 40px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    position: relative;
+    height: fit-content;
+  }
 
+  .all-three-container {
+    width: 100%;
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
   }
 
-  .pokesize {
+  #all-three-image {
+    max-width: 100%;
     height: auto;
-    width: 100%;
-    object-fit: scale-down;
   }
   
   #map {
@@ -306,8 +534,53 @@ footer {
   }
 
   .part {
-    visibility: hidden;
+    display: none;
   }
+
+  #home-info {
+    padding: 2rem;
+  }
+  
+  #home-info p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  #home-info h2 {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  #pokeball {
+    object-fit: scale-down;
+    width: auto;
+    height: 4rem;
+    text-align: center;
+  }
+
+  #video-container {
+    width: 90%;
+  }
+
+  .games {
+    justify-content: center;
+    padding: 5%;
+  }
+
+  #scarletgame {
+    flex-wrap: wrap-reverse;
+  }
+
+  #violetgame {
+    flex-wrap: wrap;
+  }
+
+  .image {
+    max-width: 50%;
+  }
+
+
 }
 
   @keyframes hero-zoom {
@@ -320,117 +593,6 @@ footer {
 
   }
 
-/* hero */
-
-#hero-outer {
-  height: 600px;
-  width: 100%;
-  gap: 0.5rem;
-  justify-content: space-between;
-  display: flex;
-  position: relative;
-}
-
-.part {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  color: #fefefe;
-  cursor: pointer;
-  margin-top: 4.5%;
-  position: relative;
-}
-
-.part.left {
-  background: green;
-  transition: all 0.5s ease;
-}
-
-.part.center {
-  background: red;
-  transition: all 0.5s ease;
-}
-
-.part.right {
-  background: blue;
-  transition: all 0.5s ease;
-}
-
-.part .text {
-  padding: 2rem;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 2;
-  background: linear-gradient(0deg, #000000bf 0%, #ffffff00 100%);
-}
-
-.part h2 {
-  font-size: 2.5rem;
-  position: relative;
-  padding-bottom: 2rem;
-}
-
-.part .abstract {
-  color: #fefefe;
-  font-family: Merriweather, sans-serif;
-  padding-top: 1rem;
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-
-.part p {
-  margin-bottom: 1rem;
-}
-
-.part.left .text {
-  padding-right: 5rem;
-}
-
-.part.center .text {
-  padding-right: 5rem;
-}
-
-.part.right .text {
-  padding-right: 5rem;
-}
-
-.part .bg {
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  filter: grayscale(1);
-  transition: all 0.5s ease;
-  background-size: cover;
-}
-
-.part.left .bg {
-  background-image: url(../images/sprigatito.png);
-}
-
-.part.center .bg {
-  background-image: url(../images/fuecoco.png);
-}
-
-.part.right .bg {
-  background-image: url(../images/quaxly.png);
-}
-
-.part:hover .bg {
-  filter: grayscale(0);
-  transform: scale(1.2);
-}
-
-.part:hover .abstract {
-  opacity: 1;
-  max-height: 20rem;
-}
-
-.part:hover {
-  background: grey;
-}
 
 
 /* Pokemon page */
