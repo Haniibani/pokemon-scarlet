@@ -14,7 +14,7 @@ body {
   background: #fefefe;
 }
 
-/* common containers */
+/* containers */
 
 .container {
   max-width: 1200px;
@@ -22,7 +22,18 @@ body {
   margin: auto;
 }
 
-.flex {
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.flex-feature {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -571,10 +582,12 @@ footer {
 
   .wrap-reverse {
     flex-wrap: wrap-reverse;
+    justify-content: center;
   }
 
   .wrap {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .image {
@@ -607,29 +620,11 @@ footer {
 
 .evolutions {
   margin-top: 10px;
-  padding: 30px;
-  
-}
-
-.pokemons {
+  padding: 8%;
+  gap: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 50px;
-}
-
-.pokemons p {
-  font-family: Merriweather, sans-serif;
-  font-size: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  display: table;
-  max-width: 85%;
-}
-
-#spriga div {
-  display: flex;
-
+  
 }
 
 #sprigatito-image {
@@ -637,18 +632,9 @@ footer {
   height: auto;
 }
 
-#flora div {
-  display: flex;
-
-}
-
 #floragato-image {
   width: 12rem;
   height: auto;
-}
-
-#meows div {
-  display: flex;
 }
 
 #meowscarada-image {
@@ -661,17 +647,9 @@ footer {
   height: auto;
 }
 
-#fuecoco div {
-  display: flex;
-}
-
 #crocalor-image {
   width: 10rem;
   height: auto;
-}
-
-#crocalor div {
-  display: flex;
 }
 
 #skeledirge-image {
@@ -679,17 +657,9 @@ footer {
   height: auto;
 }
 
-#skeledirge div {
-  display: flex;
-}
-
 #quaxly-image {
   width: 7rem;
   height: auto;
-}
-
-#quaxly div {
-  display: flex;
 }
 
 #quaxwell-image {
@@ -697,17 +667,9 @@ footer {
   height: auto;
 }
 
-#quaxwell div {
-  display: flex;
-}
-
 #quaquaval-image {
   width: 14rem;
   height: auto;
-}
-
-#quaquaval div {
-  display: flex;
 }
 
 /* The Game */
