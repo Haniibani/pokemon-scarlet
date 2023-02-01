@@ -592,6 +592,13 @@ footer {
 
   }
 
+/* Small screens from 380px and down */
+@media screen and (max-width: 380px) {
+
+  .logo {
+    font-size: 1rem;
+  }
+}
 
 
 /* Pokemon page */
