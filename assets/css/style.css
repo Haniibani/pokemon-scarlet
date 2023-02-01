@@ -569,11 +569,11 @@ footer {
     padding: 5%;
   }
 
-  #scarletgame {
+  .wrap-reverse {
     flex-wrap: wrap-reverse;
   }
 
-  #violetgame {
+  .wrap {
     flex-wrap: wrap;
   }
 
