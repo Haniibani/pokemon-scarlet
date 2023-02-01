@@ -325,19 +325,20 @@ body {
 /* footer */
 
 footer {
-  position: fixed;
+  margin-top: 5%;
   bottom: 0;
   width: 100%;
   background: #fa0000;
   color: #ffffff;
   opacity: 0.85;
-  height: 40px;
+  height: fit-content;
   font-family: Merriweather, sans-serif;
 }
 
 .footer-links {
-  text-align: center;
-  padding-top: 0.5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footer-links > li {
@@ -346,8 +347,6 @@ footer {
 
 .footer-links a {
   font-size: 160%;
-  margin: 1%;
-  padding: 5%;
   color: #ffffff;
 }
 
